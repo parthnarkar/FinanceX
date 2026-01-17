@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 import {
   Brain,
   Lightbulb,
@@ -14,13 +14,13 @@ import {
   Facebook,
   Twitter,
   Instagram,
-  Mail
-} from 'lucide-react';
+  Mail,
+} from "lucide-react";
 
 const LandingPage = () => {
   const navigate = useNavigate();
   const scrollToSection = (sectionId) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -30,29 +30,31 @@ const LandingPage = () => {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-gray-900">💰 FinanceAI</span>
+              <span className="text-2xl font-bold text-gray-900">
+                💰 FinanceAI
+              </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <button
-                onClick={() => scrollToSection('features')}
+                onClick={() => scrollToSection("features")}
                 className="text-gray-600 hover:text-indigo-600 font-medium transition-colors"
               >
                 Features
               </button>
               <button
-                onClick={() => scrollToSection('how-it-works')}
+                onClick={() => scrollToSection("how-it-works")}
                 className="text-gray-600 hover:text-indigo-600 font-medium transition-colors"
               >
                 How It Works
               </button>
               <button
-                onClick={() => scrollToSection('pricing')}
+                onClick={() => scrollToSection("pricing")}
                 className="text-gray-600 hover:text-indigo-600 font-medium transition-colors"
               >
                 Pricing
               </button>
               <button
-                onClick={() => scrollToSection('about')}
+                onClick={() => scrollToSection("about")}
                 className="text-gray-600 hover:text-indigo-600 font-medium transition-colors"
               >
                 About
@@ -60,14 +62,14 @@ const LandingPage = () => {
             </div>
             <div className="flex items-center space-x-4">
               <button
-                onClick={() => navigate('/login')}
+                onClick={() => navigate("/login")}
                 className="text-gray-600 hover:text-indigo-600 font-medium transition-colors"
               >
                 Sign In
               </button>
               <button
-                onClick={() => navigate('/signup')}
-                className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+                onClick={() => navigate("/signup")}
+                className="bg-linear-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
               >
                 Get Started
               </button>
@@ -77,7 +79,7 @@ const LandingPage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-indigo-600 to-purple-700 py-20 lg:py-24">
+      <section className="bg-linear-to-br from-indigo-600 to-purple-700 py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -88,7 +90,7 @@ const LandingPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <button
-                onClick={() => navigate('/signup')}
+                onClick={() => navigate("/signup")}
                 className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Started Free
@@ -100,7 +102,7 @@ const LandingPage = () => {
             </div>
             {/* Hero Image Placeholder */}
             <div className="max-w-4xl mx-auto bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
-              <div className="aspect-video bg-gradient-to-br from-white/20 to-white/5 rounded-lg flex items-center justify-center">
+              <div className="aspect-video bg-linear-to-br from-white/20 to-white/5 rounded-lg flex items-center justify-center">
                 <span className="text-white/70 text-lg">Dashboard Mockup</span>
               </div>
             </div>
@@ -116,7 +118,8 @@ const LandingPage = () => {
               Powerful Features for Smart Finance
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Experience the future of personal finance with AI-powered insights and automation.
+              Experience the future of personal finance with AI-powered insights
+              and automation.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -125,9 +128,12 @@ const LandingPage = () => {
               <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                 <Brain className="w-6 h-6 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">AI-Powered Parsing</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                AI-Powered Parsing
+              </h3>
               <p className="text-gray-600">
-                Paste SMS or upload statements. Gemini AI extracts transactions automatically—no typing required.
+                Paste SMS or upload statements. Gemini AI extracts transactions
+                automatically—no typing required.
               </p>
             </div>
 
@@ -136,9 +142,12 @@ const LandingPage = () => {
               <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                 <Lightbulb className="w-6 h-6 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Smart Financial Insights</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Smart Financial Insights
+              </h3>
               <p className="text-gray-600">
-                Get personalized spending analysis, pattern detection, and actionable recommendations powered by AI.
+                Get personalized spending analysis, pattern detection, and
+                actionable recommendations powered by AI.
               </p>
             </div>
 
@@ -147,9 +156,12 @@ const LandingPage = () => {
               <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Fraud Detection</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Fraud Detection
+              </h3>
               <p className="text-gray-600">
-                AI analyzes suspicious messages and protects you from financial scams and phishing attempts.
+                AI analyzes suspicious messages and protects you from financial
+                scams and phishing attempts.
               </p>
             </div>
 
@@ -158,9 +170,12 @@ const LandingPage = () => {
               <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                 <MessageCircle className="w-6 h-6 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Ask Anything</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Ask Anything
+              </h3>
               <p className="text-gray-600">
-                Chat with AI about your finances. Get instant answers grounded in your actual spending data.
+                Chat with AI about your finances. Get instant answers grounded
+                in your actual spending data.
               </p>
             </div>
 
@@ -169,9 +184,12 @@ const LandingPage = () => {
               <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                 <BarChart3 className="w-6 h-6 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Health Tracking</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Health Tracking
+              </h3>
               <p className="text-gray-600">
-                Real-time financial health scoring with personalized improvement suggestions.
+                Real-time financial health scoring with personalized improvement
+                suggestions.
               </p>
             </div>
 
@@ -180,9 +198,12 @@ const LandingPage = () => {
               <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
                 <TrendingUp className="w-6 h-6 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Beautiful Dashboards</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Beautiful Dashboards
+              </h3>
               <p className="text-gray-600">
-                See your spending patterns through intuitive charts and categorized breakdowns.
+                See your spending patterns through intuitive charts and
+                categorized breakdowns.
               </p>
             </div>
           </div>
@@ -206,7 +227,9 @@ const LandingPage = () => {
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">📱</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Paste SMS or Upload Statement</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Paste SMS or Upload Statement
+              </h3>
             </div>
 
             {/* Arrow */}
@@ -217,7 +240,9 @@ const LandingPage = () => {
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🧠</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">AI Analyzes & Categorizes</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                AI Analyzes & Categorizes
+              </h3>
             </div>
 
             {/* Arrow */}
@@ -228,18 +253,24 @@ const LandingPage = () => {
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">✨</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Get Insights & Recommendations</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Get Insights & Recommendations
+              </h3>
             </div>
           </div>
         </div>
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
+      <section className="py-16 sm:py-20 lg:py-24 bg-linear-to-r from-indigo-600 to-purple-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Powered by Google Gemini AI</h3>
-            <p className="text-xl text-indigo-100">Built for India's Financial Future</p>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Powered by Google Gemini AI
+            </h3>
+            <p className="text-xl text-indigo-100">
+              Built for India's Financial Future
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-white">
@@ -273,11 +304,22 @@ const LandingPage = () => {
             {/* Free Plan */}
             <div className="bg-white rounded-xl shadow-lg p-8 text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Free</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-2">₹0<span className="text-lg font-normal">/month</span></div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">
+                ₹0<span className="text-lg font-normal">/month</span>
+              </div>
               <ul className="text-left space-y-3 mb-8">
-                <li className="flex items-center"><Check className="w-5 h-5 text-green-500 mr-2" />50 transactions/month</li>
-                <li className="flex items-center"><Check className="w-5 h-5 text-green-500 mr-2" />Basic insights</li>
-                <li className="flex items-center"><Check className="w-5 h-5 text-green-500 mr-2" />Scam detection</li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  50 transactions/month
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  Basic insights
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  Scam detection
+                </li>
               </ul>
               <button className="w-full bg-gray-100 text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
                 Get Started
@@ -290,16 +332,30 @@ const LandingPage = () => {
                 Most Popular
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Pro</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-2">₹99<span className="text-lg font-normal">/month</span></div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">
+                ₹99<span className="text-lg font-normal">/month</span>
+              </div>
               <ul className="text-left space-y-3 mb-8">
-                <li className="flex items-center"><Check className="w-5 h-5 text-green-500 mr-2" />Unlimited transactions</li>
-                <li className="flex items-center"><Check className="w-5 h-5 text-green-500 mr-2" />Advanced AI insights</li>
-                <li className="flex items-center"><Check className="w-5 h-5 text-green-500 mr-2" />Priority support</li>
-                <li className="flex items-center"><Check className="w-5 h-5 text-green-500 mr-2" />CSV exports</li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  Unlimited transactions
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  Advanced AI insights
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  Priority support
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  CSV exports
+                </li>
               </ul>
               <button
-                onClick={() => navigate('/signup')}
-                className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+                onClick={() => navigate("/signup")}
+                className="w-full bg-linear-to-r from-indigo-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
               >
                 Start Pro Trial
               </button>
@@ -307,13 +363,29 @@ const LandingPage = () => {
 
             {/* Business Plan */}
             <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Business</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-2">₹499<span className="text-lg font-normal">/month</span></div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Business
+              </h3>
+              <div className="text-4xl font-bold text-gray-900 mb-2">
+                ₹499<span className="text-lg font-normal">/month</span>
+              </div>
               <ul className="text-left space-y-3 mb-8">
-                <li className="flex items-center"><Check className="w-5 h-5 text-green-500 mr-2" />Everything in Pro</li>
-                <li className="flex items-center"><Check className="w-5 h-5 text-green-500 mr-2" />Team collaboration</li>
-                <li className="flex items-center"><Check className="w-5 h-5 text-green-500 mr-2" />API access</li>
-                <li className="flex items-center"><Check className="w-5 h-5 text-green-500 mr-2" />Custom integrations</li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  Everything in Pro
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  Team collaboration
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  API access
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-5 h-5 text-green-500 mr-2" />
+                  Custom integrations
+                </li>
               </ul>
               <button className="w-full bg-gray-100 text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
                 Contact Sales
@@ -330,7 +402,8 @@ const LandingPage = () => {
             <div className="col-span-1 md:col-span-2">
               <div className="text-2xl font-bold mb-4">💰 FinanceAI</div>
               <p className="text-gray-400 mb-4">
-                Your AI-powered personal finance companion. Built with ❤️ in India.
+                Your AI-powered personal finance companion. Built with ❤️ in
+                India.
               </p>
               <div className="flex space-x-4">
                 <Facebook className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" />
@@ -342,19 +415,51 @@ const LandingPage = () => {
             <div>
               <h4 className="font-semibold mb-4">Product</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white">Features</a></li>
-                <li><a href="#" className="hover:text-white">Pricing</a></li>
-                <li><a href="#" className="hover:text-white">Security</a></li>
-                <li><a href="#" className="hover:text-white">API</a></li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Security
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    API
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white">About</a></li>
-                <li><a href="#" className="hover:text-white">Blog</a></li>
-                <li><a href="#" className="hover:text-white">Careers</a></li>
-                <li><a href="#" className="hover:text-white">Contact</a></li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Contact
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
