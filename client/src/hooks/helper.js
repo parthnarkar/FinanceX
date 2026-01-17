@@ -1,4 +1,4 @@
-let backendUrl = '';
+let backendUrl;
 
 if (process.env.NODE_ENV === 'production') {
     backendUrl = import.meta.env.VITE_BACKEND_URL; 
