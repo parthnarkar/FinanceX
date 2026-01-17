@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # Enable CORS for all routes
-CORS(app)
+CORS(app, origins=['*'], supports_credentials=True)
 
 @app.route('/', methods=['GET'])
 def home():
