@@ -6,7 +6,8 @@ import {
   signInWithPopup,
   signOut,
   onAuthStateChanged,
-  updateProfile
+  updateProfile,
+  GoogleAuthProvider
 } from 'firebase/auth';
 import { auth, googleProvider } from '../config/firebase.config';
 
@@ -17,11 +18,18 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [googleAccessToken, setGoogleAccessToken] = useState(null);
 
   // Listen to authentication state changes
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
+      if (user) {
+        const storedToken = localStorage.getItem('googleAccessToken');
+        if (storedToken) {
+          setGoogleAccessToken(storedToken);
+        }
+      }
       setLoading(false);
     });
 
@@ -63,7 +71,11 @@ export const AuthProvider = ({ children }) => {
   const googleSignIn = async () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
-      return { success: true, user: result.user };
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      setGoogleAccessToken(token);
+      localStorage.setItem('googleAccessToken', token);
+      return { success: true, user: result.user, accessToken: token };
     } catch (error) {
       console.error('Google sign-in error:', error);
       return { success: false, error: getAuthErrorMessage(error.code) };
@@ -74,6 +86,8 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     try {
       await signOut(auth);
+      setGoogleAccessToken(null);
+      localStorage.removeItem('googleAccessToken');
       return { success: true };
     } catch (error) {
       console.error('Logout error:', error);
@@ -112,7 +126,8 @@ export const AuthProvider = ({ children }) => {
     login,
     signup,
     googleSignIn,
-    logout
+    logout,
+    googleAccessToken
   };
 
   return (

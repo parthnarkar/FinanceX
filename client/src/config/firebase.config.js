@@ -22,6 +22,7 @@ export const auth = getAuth(app);
 
 // Initialize Google Auth Provider
 export const googleProvider = new GoogleAuthProvider();
+googleProvider.addScope('https://www.googleapis.com/auth/gmail.readonly');
 googleProvider.setCustomParameters({
   prompt: 'select_account'
 });
